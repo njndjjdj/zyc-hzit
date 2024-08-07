@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding" native2AsciiForPropertiesFiles="true" defaultCharsetForPropertiesFiles="UTF-8">
+    <file url="file://$PROJECT_DIR$/javaWeb-common/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/javaWeb-common/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/javaWeb-day04/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/javaWeb-day04/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/javaWeb-mybatis/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/javaWeb-mybatis/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/javaWeb-server/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/javaWeb-server/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/resources" charset="UTF-8" />
+  </component>
+</project>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zyc.mapper.StudentMapper">
+    <insert id="addStudent" parameterType="Student">
+        insert into student
+        values (#{stuno}, #{stuname}, #{classno}, #{sex}, #{age})
+    </insert>
+    <update id="updateStudent" parameterType="Student">
+        update student
+        set stuno=#{stuno},
+            classno=#{classno},
+            age=#{age},
+            sex=#{sex},
+            stuname=#{stuname}
+        where stuno = #{stuno}
+    </update>
+    <!--根据id删除-->
+    <delete id="deleteStudentById" parameterType="string">
+        delete from student where stuno = #{id}
+    </delete>
+    <delete id="deleteAllStudentById" parameterType="list">
+        delete from student
+        <where>
+            stuno in
+            <foreach collection="ids" open="(" close=")" item="stuno" separator=",">
+                #{stuno}
+            </foreach>
+        </where>
+    </delete>
+
+    <!--查询所有学生-->
+    <select id="findAllStudent" resultType="Student">
+        select *
+        from student
+    </select>
+
+    <!--分页查询-->
+    <select id="findStudentByPage" resultType="Student">
+        select * from student
+    </select>
+
+    <select id="findStudentByPageAndParam" resultType="Student" parameterType="com.zyc.vo.StudentVO">
+        select * from student
+        <where>
+            <if test="stuno != null and stuno != ''">
+                and stuno = #{stuno}
+            </if>
+            <if test="stuname != null and stuname != ''">
+                and stuname like '%${stuname}%'
+            </if>
+            <if test="classno != null and classno != '0' and classno != 0">
+                and classno = #{classno}
+            </if>
+        </where>
+    </select>
+    <!--根据id查询-->
+    <select id="selectStudentById" resultType="Student" parameterType="string">
+        select * from student where stuno = #{id}
+    </select>
+</mapper>

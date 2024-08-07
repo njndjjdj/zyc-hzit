@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module version="4">
+  <component name="FacetManager">
+    <facet type="JRebel" name="JRebel">
+      <configuration>
+        <option name="ideModuleStorage">
+          <map>
+            <entry key="com.zeroturnaround.jrebel.FormatVersion" value="7.0.0" />
+            <entry key="jrebelEnabled" value="true" />
+            <entry key="rebelXmlGenerationInvariantToken" value="PGFwcGxpY2F0aW9uIGdlbmVyYXRlZC1ieT0iaW50ZWxsaWoiPjxpZD5qYXZhV2ViLWRheTA0PC9pZD48Y2xhc3NwYXRoPjxkaXIgbmFtZT0iRDovemh1b21pYW4vSURFQTIwMjQuMi9oemF0L2phdmFXZWIvamF2YVdlYi0wMi1wYXJlbnQvamF2YVdlYi1kYXkwNC90YXJnZXQvY2xhc3NlcyI+PC9kaXI+PC9jbGFzc3BhdGg+PHdlYj48bGluayB0YXJnZXQ9Ii8iPjxkaXIgbmFtZT0iRDovemh1b21pYW4vSURFQTIwMjQuMi9oemF0L2phdmFXZWIvamF2YVdlYi0wMi1wYXJlbnQvamF2YVdlYi1kYXkwNC9zcmMvbWFpbi93ZWJhcHAiPjwvZGlyPjwvbGluaz48L3dlYj48L2FwcGxpY2F0aW9uPg==" />
+          </map>
+        </option>
+        <option name="version" value="5" />
+      </configuration>
+    </facet>
+    <facet type="web" name="Web2">
+      <configuration>
+        <descriptors>
+          <deploymentDescriptor name="web.xml" url="file://$MODULE_DIR$/javaWeb-day04/src/main/webapp/WEB-INF/web.xml" />
+        </descriptors>
+        <webroots>
+          <root url="file://$MODULE_DIR$/javaWeb-day04/src/main/webapp" relative="/" />
+        </webroots>
+        <sourceRoots>
+          <root url="file://$MODULE_DIR$/javaWeb-day04/src/main/java" />
+          <root url="file://$MODULE_DIR$/javaWeb-day04/src/main/resources" />
+        </sourceRoots>
+      </configuration>
+    </facet>
+  </component>
+</module>

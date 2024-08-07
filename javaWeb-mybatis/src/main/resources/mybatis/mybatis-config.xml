@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+
+    <!--导入jdbc的配置文件-->
+    <properties resource="properties/jdbc.properties"/>
+
+    <!--mybatis的设置-->
+
+    <settings>
+        <!--打印日志-->
+        <setting name="logImpl" value="STDOUT_LOGGING"/>
+    </settings>
+    <!--设置类型别名-->
+    <typeAliases>
+        <typeAlias alias="Student" type="com.zyc.entity.Student"/>
+        <typeAlias alias="Classes" type="com.zyc.entity.Classes"/>
+    </typeAliases>
+    <plugins>
+        <plugin interceptor="com.github.pagehelper.PageInterceptor">
+            <!-- 设置数据库类型 Oracle,Mysql,MariaDB,SQLite,Hsqldb,PostgreSQL 六种数据库-->
+            <property name="helperDialect" value="mysql"/>
+        </plugin>
+    </plugins>
+    <environments default="development">
+        <environment id="development">
+            <transactionManager type="JDBC"/>
+            <dataSource type="POOLED">
+                <property name="driver" value="${jdbc.driver}"/>
+                <property name="url" value="${jdbc.url}"/>
+                <property name="username" value="${jdbc.user}"/>
+                <property name="password" value="${jdbc.password}"/>
+            </dataSource>
+        </environment>
+    </environments>
+    <!--引入实体类对应的xml映射文件，resource的分级是用 / 来分级的-->
+    <mappers>
+        <mapper resource="com/zyc/mapper/StudentMapper.xml"/>
+        <mapper resource="com/zyc/mapper/ClassesMapper.xml"/>
+    </mappers>
+</configuration>
